@@ -6,6 +6,7 @@ import com.capgemini.beans.Account;
 import com.capgemini.exceptions.AccountNotFoundException;
 
 public class AccountRepositoryImpl implements AccountRepository {
+	private HashMap<String, Account> warehouse;
 	
 	public AccountRepositoryImpl() {
 		warehouse = new HashMap<>();
@@ -35,5 +36,5 @@ public class AccountRepositoryImpl implements AccountRepository {
 			throw new AccountNotFoundException();
 		}
 	}
-	HashMap<String, Account> warehouse;
+	
 }
